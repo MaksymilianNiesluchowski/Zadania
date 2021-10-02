@@ -1,0 +1,75 @@
+<html>
+    <head>
+    <title>Maksymilian Niesłuchowski </title>
+    <script language="JavaScript">
+        function WinOpen_Niesluchowski() {
+            window.open("obraz1.html","okienko","toolbar=no,directories=no,menubar=no,height=280,width=160,top=100,left=0");
+        }
+        function WinOpen_Niesluchowski2() {
+            window.open("obraz2.html","okienko1","toolbar=no,directories=no,menubar=no,height=280,width=160,top=100,left=2000");
+        }
+        function WinOpen_Niesluchowski3() {
+            window.open("obraz3.html","okienko2","toolbar=no,directories=no,menubar=no,height=280,width=160,top=800,left=0");
+        }
+        function WinOpen_Niesluchowski4() {
+            window.open("obraz4.html","okienko3","toolbar=no,directories=no,menubar=no,height=280,width=160,top=800,left=2000");
+        }
+
+        function show_confirm()  { 
+            var r=confirm("Naciśnij klawisz"); 
+            if (r==true)  {  document.write("Nacisnąłeś OK!");  }
+         else  
+        {  document.write("Nacisnąłeś Cancel!");  } 
+    } 
+
+        function show_prompt() { 
+            var name=prompt("Napisz imię","Imię Nazwisko"); 
+            if (name!=null && name!="")  
+            {  
+            document.write("Witaj " + name + "! jak się masz?");  
+        } 
+    } 
+
+        function sumowanie() {
+            var liczba1=prompt("liczba1=","");
+            var liczba2=prompt("liczba2=","");
+            var suma;var a=parseFloat(liczba1);
+            var b=parseFloat(liczba2);
+            suma=a+b;document.write("suma = "+a+" + "+b+" = "+suma+"<br>"); 
+        }
+
+        function czas(){
+            var D1_Nie=prompt("1 dzień","");
+            var D2_Nie=prompt("2 dzień","");
+            var sekundy;
+            var a=parseFloat(D1_Nie);
+            var b=parseFloat(D2_Nie);
+                if (a<=b && 1<=a && b<=31) {
+            suma=(b-a)*86400;
+            document.write("Od ",a," do ",b," minęło ",suma," sekund. " );
+     }
+     else {
+         document.write("Podano błędne dane! Spróbuj a < b");
+        }
+     }
+    </script>
+    <meta charset="UTF-8" />
+    </head>
+
+    <body>
+        <div id="imie" style="font-size: 2cm;">Maksymilian Niesłuchowski</div>
+
+        <input type="button" name="przycisk" value="Przykład 1a" onclick="WinOpen_Niesluchowski()">
+        <input type="button" name="przycisk" value="Przykład 1b" onclick="WinOpen_Niesluchowski2()">
+        <input type="button" name="przycisk" value="Przykład 1c" onclick="WinOpen_Niesluchowski3()">
+        <input type="button" name="przycisk" value="Przykład 1d" onclick="WinOpen_Niesluchowski4()">
+        <input type="button" onclick="alert('Dzień Dobry Panie Filipie, mam nadzieje że miał Pan dobry dzień!')" value="Pokaż Alert Box" /> 
+        <input type="button" onclick="show_confirm()" value="Pokaż confirm box" />
+        <input type="button" onclick="show_prompt()" value="Pokaż prompt box" />
+        <input type="button" onclick="sumowanie()" value="Oblicz sume" />
+        <input type="button" onclick="czas()" value="oblicz czas miedzy 1 a 2 dniem" />
+        <div id="output"></div>
+    </body>
+</html> 
+
+
