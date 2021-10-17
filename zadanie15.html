@@ -1,0 +1,31 @@
+<html>
+<head>
+    <meta charset="UTF-8"> 
+</head>
+<body>
+    <script>
+        var x1_nie=parseInt(prompt("wprowadz x1=",""));
+        var x2_nie=parseInt(prompt("wprowadz x2=",""));
+        
+		var y=3*(x1_nie**(6/8));
+        var y1=(2*Math.cos(x1_nie))+(2*Math.sin(x1_nie));
+        
+		var x1a=(3.14*x1_nie)/180;
+        var x2a=(3.14*x2_nie)/180;
+        
+		var y3=Math.pow((x1a**5)+(2*(x2a**4)),1/3)*Math.abs(x1a-x2a);
+    
+	document.write("x1= "+x1_nie+" <br>");
+    document.write("x2= "+x2_nie+"<br> ");
+    document.write("x1(rad)= "+x1a+"<br> ");
+    document.write("x2(rad)= "+x2a+"<br> ");
+    document.write("y= "+y+"<br> ");
+    document.write("y1= "+y1+"<br> ");
+    document.write("y3= "+y3+"<br> ");
+        </script>
+
+
+
+
+</body>
+</html>
